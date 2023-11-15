@@ -1,12 +1,12 @@
-exports.success = function(req, res, message, status){
+exports.success = function(req, res, mensaje, status, body){
     res.status(status || 200).send({
-        error:"",
-        body: message
+        Mensaje:mensaje,
+        body: body
     })
 }
 exports.error = function(req, res, message, status){
     res.status(status || 500).send({
         error:message,
-        body: ""
+        
     })
 }
